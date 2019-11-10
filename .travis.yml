@@ -1,0 +1,21 @@
+os: linux
+language: node_js
+node_js:
+- lts/*
+install:
+- npm ci
+script:
+- npm run docs:build
+deploy:
+  project_name: jwflory/poc_vuepress_docs
+  provider: pages
+  cleanup: false
+  local_dir: docs/.vuepress/dist
+  github_token: "$GITHUB_TOKEN"
+  keep_history: true
+  committer_from_gh: true
+  on:
+    branch: master
+env:
+  global:
+    secure: kJE4QUw8dPftGnp0hhqenoK6GGrsvs18HvMWihC8yZbLhLjl2vBk6RM761/0wl12/cnik4+9dnjjAf4bvDdPDniHn62bUlGDpCFd2UkQzy13NDjISptpSGlxR4ujw4duGcbn9vn+gm+uUq+pL9tWsElF3pgmePGMyNcDcq1jfa6RyZV8to67ku9vmAdMRa/xvTF5BgWGMg7SedjBz6OqkxCDQe5t32HorKbewzfKzIZioYx2q8bVekC10/ArNRV2969s4q8t09s71el3jqccCJeMat7rTdsSf/fOuJow0W/qLCCI39zXagC0k7OT0IAclxBez0clrr5gIkv8+LGf69AzgpQxLelgNBYxExk8C/RiM7brBPjEnxDf0xh+lFh4gu7+mn93JHjaxOpQNEpTLE+TPkIs5E4E0P3SgncriQvxzX3ESMIN51V/oC5zU3QV7/KFQKTb4fDansxd//E100XbFKV3LoWiNzhYNhqvaVKK2DWpatBgS0Bo1UTASzGB6meHuZbPvoHAcKvT3BEMn3MXkM6ynizRWKn/hC9mjK3oEQD9TNwfw+QfIDaOi2KjMiWIn5XPFPp8n6VXKzWmSv74eOatuPIcouB+TtiDeZspExAAtNb7zgObTFGF1sNpJ8kv3nuPrPd1NpAU66DrMW8e6+LBFi3mEX3WWN/3pYw=

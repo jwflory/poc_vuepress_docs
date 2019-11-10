@@ -2,8 +2,9 @@ poc_vuepress_docs
 =================
 
 [![License: BSD 3-Clause License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![Build Status](https://travis-ci.org/jwflory/poc_vuepress_docs.svg?branch=master)](https://travis-ci.org/jwflory/poc_vuepress_docs)
 
-Proof-of-concept VuePress documentation site built locally and hosted in GitHub Pages
+Proof-of-concept VuePress documentation site built in Travis CI and deployed to GitHub Pages
 
 
 ## About
