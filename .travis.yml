@@ -8,11 +8,11 @@ script:
 - npm run docs:build
 deploy:
   provider: pages
-  cleanup: false
   local_dir: docs/.vuepress/dist
   github_token: "$GITHUB_TOKEN"
   keep_history: true
   committer_from_gh: true
+  skip_cleanup: true
   on:
     branch: master
 env:
